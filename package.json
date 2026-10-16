@@ -1,0 +1,30 @@
+{
+  "name": "backend-appport",
+  "version": "1.0.0",
+  "description": "API REST de currículos (Express + PostgreSQL/NeonDB) para o app portfólio",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js",
+    "seed": "node src/seed/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Giantrafa/backend-appPort.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Giantrafa/backend-appPort/issues"
+  },
+  "homepage": "https://github.com/Giantrafa/backend-appPort#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0",
+    "pg": "^8.23.1",
+    "sequelize": "^6.37.8"
+  }
+}
