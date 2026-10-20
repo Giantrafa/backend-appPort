@@ -47,11 +47,26 @@ const semear = async () => {
       const experienciasCriadas = await Experiencia.bulkCreate(comPessoa(experiencias, pessoa_id), {
         transaction,
       });
-      const experienciaPorEmpresa = Object.fromEntries(experienciasCriadas.map((e) => [e.empresa, e.id]));
+
+      const idDaExperiencia = (referencia) => {
+        if (!referencia) return null;
+
+        const encontradas = experienciasCriadas.filter(
+          (e) => e.empresa === referencia || e.cargo === referencia || `${e.empresa} - ${e.cargo}` === referencia
+        );
+
+        if (encontradas.length !== 1) {
+          throw new Error(
+            `Experiência "${referencia}" de ${perfil.nome} ${encontradas.length ? "é ambígua (use \"Empresa - Cargo\")" : "não existe"}`
+          );
+        }
+
+        return encontradas[0].id;
+      };
 
       for (const { tecnologias = [], experiencia, ...projeto } of projetos) {
         const criado = await Projeto.create(
-          { ...projeto, pessoa_id, experiencia_id: experienciaPorEmpresa[experiencia] ?? null },
+          { ...projeto, pessoa_id, experiencia_id: idDaExperiencia(experiencia) },
           { transaction }
         );
 

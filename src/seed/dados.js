@@ -1,4 +1,3 @@
-
 export const habilidades = [
   { nome: "JavaScript", categoria: "linguagem" },
   { nome: "TypeScript", categoria: "linguagem" },
@@ -26,24 +25,24 @@ export const pessoas = [
   {
     nome: "Rafael",
     titulo: "Estudante de Sistemas para Internet | Desenvolvedor Full Stack",
-    email: "rafael.portfolio@example.com",
-    telefone: "+55 00 00000-0000",
+    email: "rafael.deassis@yahoo.com.br",
+    telefone: "+55 81 999082930",
     cidade: "Brasil",
     resumo:
       "Sou estudante da área de TI e busco melhorar minhas habilidades e explorar outras áreas para ampliar meu conhecimento. Tenho interesse em desenvolvimento web e mobile, back-end e banco de dados.",
     contatos: [
-      { tipo: "email", valor: "rafael.portfolio@example.com", url: "mailto:rafael.portfolio@example.com" },
+      { tipo: "email", valor: "rafael.deassis@yahoo.com.br", url: "mailto:rafael.deassis@yahoo.com.br" },
       { tipo: "github", valor: "github.com/Giantrafa", url: "https://github.com/Giantrafa" },
-      { tipo: "whatsapp", valor: "+55 00 00000-0000", url: "https://wa.me/5500000000000" },
+      { tipo: "whatsapp", valor: "+55 81 999082930", url: "https://wa.me/5581999082930" },
     ],
     formacoes: [
       {
-        instituicao: "Instituto Federal",
+        instituicao: "UNICAP",
         curso: "Tecnologia em Sistemas para Internet",
         nivel: "tecnologo",
         data_inicio: "2025-02-01",
         data_fim: null,
-        descricao: "Curso em andamento, com foco em desenvolvimento web, mobile e banco de dados.",
+        descricao: "Curso em andamento",
       },
       {
         instituicao: "Escola Estadual",
@@ -81,11 +80,12 @@ export const pessoas = [
         tecnologias: ["Node.js", "Express", "PostgreSQL", "JavaScript"],
       },
       {
-        nome: "Sistema de Visitas (PI4)",
-        descricao: "Sistema para agendar e registrar visitas de fiscalização, com autenticação e controle de perfis.",
+        nome: "AutoShoop (PI3)",
+        descricao: "Sistema de Controle de clientes para oficina",
         data_inicio: "2026-03-01",
         experiencia: "Projeto Integrador (Faculdade)",
         tecnologias: ["Node.js", "Express", "PostgreSQL", "React"],
+        url_repositorio: "https://github.com/Giantrafa/ProjetoFrontEnd",
       },
     ],
     habilidades: [
@@ -167,7 +167,7 @@ export const pessoas = [
         descricao: "Manutenção e evolução de sistemas ERP em Java e MySQL.",
       },
       {
-        empresa: "Softhouse Brasil",
+        empresa: "Nexa Sistemas",
         cargo: "Estagiária de Desenvolvimento",
         tipo: "estagio",
         local: "São Paulo - SP",
